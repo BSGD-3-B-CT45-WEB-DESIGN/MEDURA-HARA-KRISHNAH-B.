@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Activity 7 - FINALS</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="spongebob.png" type="image/png">
+    <link rel="icon" type="image/jpg" href="1.jpg">
+
+    <link rel="stylesheet" href="FINALstyle.css">
+</head>
+
+<body>
+
+
+<!-- LOGIN SCREEN -->
+
+<div id="login-screen">
+
+    <div class="login-box">
+
+        <h1>Welcome to Bikini Bottom 🧽</h1>
+
+        <p>Enter the underwater world</p>
+
+        <input type="text" id="username" placeholder="Username">
+
+        <input type="password" id="password" placeholder="Password">
+
+        <button onclick="doLogin()">Enter</button>
+
+    </div>
+
+</div>
+
+<!-- MAIN CONTENT -->
+
+<div id="main-content">
+
+    <!-- NAVIGATION -->
+
+    <nav>
+        <a href="#" onclick="goTo(1);return false;">ACT 5 - HERO PAGE</a>
+
+        <a href="#" onclick="goTo(2);return false;">
+            ACT 4 - HTML IMAGE, FAVICON AND AUDIO
+        </a>
+
+        <a href="#" onclick="goTo(3);return false;">ACT2 - CSS BASIC</a>
+
+        <a href="#" onclick="goTo(4);return false;">
+            ACT 3 - CSS HOVER, SHADOW AND TRANSITION
+        </a>
+    </nav>
+
+    <!-- PAGE 1 -->
+
+    <div class="page" id="page1">
+
+        <div class="hero">
+
+            <p class="hero-tag">BIKINI BOTTOM LIVE</p>
+
+            <h1 class="hero-title">
+                Welcome to <span>SpongeBob</span><br>World!
+            </h1>
+
+            <p class="hero-sub">
+                Jump into the fun under the sea with SpongeBob and friends in Bikini Bottom!
+            </p>
+
+            <div class="hero-btns">
+
+                <button class="btn-primary">
+                    🍍 Go Jellyfishing
+                </button>
+
+                <button class="btn-outline">
+                    🏝 Explore Bikini Bottom
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="decor">🍍</div>
+
+    </div>
+
+    <!-- PAGE 2 -->
+
+    <div class="page" id="page2">
+
+        <div class="music-card">
+
+            <!-- LEFT -->
+
+            <div class="album-side">
+
+                <div class="vinyl"></div>
+
+                <img src="4.jpg" class="album-img">
+
+            </div>
+
+            <!-- RIGHT -->
+
+            <div class="music-info">
+
+                <h1 class="song-title">
+                    PLANKSTON
+                </h1>
+
+                <h2 class="artist">
+                    Bikini Bottom Playlist
+                </h2>
+
+                <div class="audio-player">
+
+                    <audio controls loop>
+                        <source src="audio2.mp3" type="audio/mpeg">
+                    </audio>
+
+                </div>
+
+                <div class="audio-player">
+
+                    <audio controls loop>
+                        <source src="spbob.mp3" type="audio/mpeg">
+                    </audio>
+
+                </div>
+
+                <!-- equalizer -->
+
+                <div class="equalizer">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- PAGE 3 -->
+
+    <div class="page" id="page3">
+        <div class="page-title">
+
+    <h1>CSS Basics</h1>
+
+    <p>Recreating famous website buttons using basic CSS styling</p>
+
+    </div>
+
+        <div class="page3-container">
+
+            <button class="request-now">Request now</button>
+
+            <button class="addtocart">Add To Cart</button>
+
+            <button class="signup">Sign up</button>
+
+            <button class="getstarted">Get started</button>
+
+            <button class="download">Download</button>
+
+            <button class="apply">Apply on company website</button>
+
+            <button class="save">Save</button>
+
+        </div>
+
+    </div>
+
+    <!-- PAGE 4 -->
+
+    <div class="page" id="page4">
+        <div class="page-title">
+
+    <h1>Hovers, Transitions, Shadows</h1>
+
+    <p>Interactive CSS button effects inspired by famous websites</p>
+
+    </div>
+
+        <div class="page3-container">
+
+            <button class="ha">Request now</button>
+
+            <button class="hi">Add To Cart</button>
+
+            <button class="he">Sign up</button>
+
+            <button class="hu">Get started</button>
+
+            <button class="ho">Download</button>
+
+            <button class="ah">Apply on company website</button>
+
+            <button class="oh">Save</button>
+
+        </div>
+
+    </div>
+
+    <!-- PAGINATION -->
+
+    <div class="pagination-bar">
+
+        <button class="page-btn nav-btn" onclick="prevPage()">
+            ← Prev
+        </button>
+
+        <button class="page-btn active" onclick="goTo(1,this)">1</button>
+
+        <button class="page-btn" onclick="goTo(2,this)">2</button>
+
+        <button class="page-btn" onclick="goTo(3,this)">3</button>
+
+        <button class="page-btn" onclick="goTo(4,this)">4</button>
+
+        <button class="page-btn nav-btn" onclick="nextPage()">
+            Next →
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="main.js"></script>

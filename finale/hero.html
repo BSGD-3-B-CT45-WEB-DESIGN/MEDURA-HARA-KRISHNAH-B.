@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SpongeBob Hero Page</title>
+
+    <!-- Fun cartoon font -->
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Luckiest Guy', cursive;
+        }
+
+        body {
+            color: #fff;
+            overflow: hidden;
+        }
+
+        /* UNDERWATER BACKGROUND */
+        #page1 {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            background: linear-gradient(180deg, #00c6ff, #0072ff, #003366);
+        }
+
+        /* BUBBLES EFFECT */
+        #page1::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle, rgba(255,255,255,0.25) 2px, transparent 3px);
+            background-size: 60px 60px;
+            animation: floatBubbles 8s linear infinite;
+            opacity: 0.4;
+        }
+
+        @keyframes floatBubbles {
+            from { transform: translateY(0); }
+            to { transform: translateY(-100px); }
+        }
+
+        .hero {
+            position: relative;
+            max-width: 700px;
+            padding: 40px 20px;
+        }
+
+        .hero-tag {
+            font-size: 16px;
+            letter-spacing: 3px;
+            color: #ffe66d;
+            margin-bottom: 14px;
+            text-shadow: 2px 2px #000;
+        }
+
+        .hero-title {
+            font-size: clamp(40px, 7vw, 80px);
+            color: #ffde59;
+            text-shadow: 4px 4px #000;
+            margin-bottom: 20px;
+        }
+
+        .hero-title span {
+            color: #ff4d6d;
+        }
+
+        .hero-sub {
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px #000;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            padding: 14px 32px;
+            background: #ffde59;
+            color: #000;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 5px 0 #bfa100;
+            transition: 0.2s;
+        }
+
+        .btn-primary:active {
+            transform: translateY(3px);
+            box-shadow: 0 2px 0 #bfa100;
+        }
+
+        .btn-outline {
+            padding: 14px 32px;
+            background: transparent;
+            color: #fff;
+            border: 3px dashed #fff;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-outline:hover {
+            background: #ffffff33;
+        }
+
+        /* FUN DECOR (pineapple vibe) */
+        .decor {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            font-size: 60px;
+            animation: sway 3s ease-in-out infinite;
+        }
+
+        @keyframes sway {
+            0%, 100% { transform: rotate(-5deg); }
+            50% { transform: rotate(5deg); }
+        }
+
+        .fun-text {
+            font-family: "Comic Sans MS", cursive;
+            font-size: 18px;
+            color: #ffffff;
+            text-shadow: 2px 2px #000;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="page1">
+    <div class="hero">
+        <p class="hero-tag">BIKINI BOTTOM LIVE</p>
+
+        <h1 class="hero-title">
+            Welcome to <span>SpongeBob</span><br>World!
+        </h1>
+
+        <p class="hero-sub">
+            Jump into the fun under the sea with SpongeBob and friends in Bikini Bottom!
+        </p>
+
+        <div class="hero-btns">
+            <button class="btn-primary">🍍 Go Jellyfishing</button>
+            <button class="btn-outline">🏝 Explore Bikini Bottom</button>
+        </div>
+    </div>
+
+    <div class="decor">🍍</div>
+</div>
+
+</body>
+</html>
